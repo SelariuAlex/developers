@@ -207,4 +207,25 @@ router.put(
   }
 );
 
+// DELETE api/profile/experience/:exp_id
+
+router.delete('/experience/:exp_id', auth, async (req, res) => {
+  try {
+    const foundProfile = await Profile.findOne({ user: req.user.id });
+    const expIds = foundProfile.experience.map(exp => exp._id.toString());
+
+    const removeIndex = expIds.indexOf(req.params.exp_id);
+    if (removeIndex === -1) {
+      return res.status(500).json({ msg: 'Server error' });
+    } else {
+      foundProfile.experience.splice(removeIndex, 1);
+      await foundProfile.save();
+      return res.status(200).json(foundProfile);
+    }
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ msg: 'Server error' });
+  }
+});
+
 module.exports = router;
