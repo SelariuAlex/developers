@@ -8,8 +8,8 @@ const Landing = () => {
     <section className="landing">
       <div className="dark-overlay">
         <div className="landing__inner">
-          <h1 className="landing--title">Developers Portfolios</h1>
-          <p className="landing--subtitle">
+          <h1 className="x-large">Developers Portfolios</h1>
+          <p className="lead">
             Create your developer portfolio, share it with the word, help
             beginners and juniors get a job
           </p>

@@ -5,7 +5,7 @@ import './navbar.styles.css';
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar bg-dark">
       <h1>
         <Link to="/">
           <i className="fas fa-laptop-code"></i> Developers
