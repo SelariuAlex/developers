@@ -10,7 +10,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <>
         <Navbar />
         <Route exact path="/" component={Landing} />
         <section className="container">
@@ -19,7 +19,7 @@ function App() {
             <Route exact path="/login" component={Login} />
           </Switch>
         </section>
-      </div>
+      </>
     </Router>
   );
 }

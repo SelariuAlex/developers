@@ -36,6 +36,7 @@ img {
 /* Utilities */
 .container {
   max-width: 1100px;
+  height: 100%;
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
@@ -45,7 +46,7 @@ img {
 
 /* Text Styles*/
 .x-large {
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -245,7 +246,7 @@ img {
   }
 
   .x-large {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .large {

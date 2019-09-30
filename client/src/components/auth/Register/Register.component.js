@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
+import FormInput from '../../../components/form-input/FormInput.component';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -11,10 +12,10 @@ const Register = () => {
 
   const { name, email, password, password2 } = formData;
 
-  const onChange = e =>
+  const handleChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault();
     if (password !== password2) {
       console.log('Passwords do not match');
@@ -29,41 +30,41 @@ const Register = () => {
       <p className="lead">
         <i className="fas fa-user" /> Create Your Account
       </p>
-      <form className="form" onSubmit={e => onSubmit(e)}>
+      <form className="form" onSubmit={e => handleSubmit(e)}>
         <div className="form-group">
-          <input
+          <FormInput
             type="text"
-            placeholder="Name"
+            label="Name"
             name="name"
             value={name}
-            onChange={e => onChange(e)}
+            onChange={e => handleChange(e)}
           />
         </div>
         <div className="form-group">
-          <input
+          <FormInput
             type="email"
-            placeholder="Email Address"
+            label="Email Address"
             name="email"
             value={email}
-            onChange={e => onChange(e)}
+            onChange={e => handleChange(e)}
           />
         </div>
         <div className="form-group">
-          <input
+          <FormInput
             type="password"
-            placeholder="Password"
+            label="Password"
             name="password"
             value={password}
-            onChange={e => onChange(e)}
+            onChange={e => handleChange(e)}
           />
         </div>
         <div className="form-group">
-          <input
+          <FormInput
             type="password"
-            placeholder="Confirm Password"
+            label="Confirm Password"
             name="password2"
             value={password2}
-            onChange={e => onChange(e)}
+            onChange={e => handleChange(e)}
           />
         </div>
         <input type="submit" className="btn btn-primary" value="Register" />
