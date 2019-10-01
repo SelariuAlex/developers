@@ -1,6 +1,6 @@
 .landing {
   position: relative;
-  background: url('../../../../src/img/cv.jpg') no-repeat center center/cover;
+  background: url('../../../img/cv.jpg') no-repeat center center/cover;
   height: 100vh;
 }
 

@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
-import FormInput from '../../../components/form-input/FormInput.component';
+import FormInput from '../../form-input/FormInput.component';
 
 const Login = () => {
   const [formData, setFormData] = useState({
