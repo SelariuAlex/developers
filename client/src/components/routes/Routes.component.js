@@ -8,6 +8,8 @@ import Dashboard from '../dashboard/Dashboard.component';
 import PrivateRoute from '../routes/PrivateRoute.component';
 import CreateProfile from '../profile-form/CreateProfile.component';
 import EditProfile from '../profile-form/EditProfile.component';
+import AddExperience from '../profile-form/AddExperience.component';
+import AddEducation from '../profile-form/AddEducation.component';
 import NotFound from '../layout/NotFound/NotFound.component';
 
 const Routes = () => {
@@ -19,6 +21,8 @@ const Routes = () => {
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
         <PrivateRoute exact path="/create-profile" component={CreateProfile} />
         <PrivateRoute exact path="/edit-profile" component={EditProfile} />
+        <PrivateRoute exact path="/add-experience" component={AddExperience} />
+        <PrivateRoute exact path="/add-education" component={AddEducation} />
         <Route component={NotFound} />
         <Route component={NotFound} />
       </Switch>
