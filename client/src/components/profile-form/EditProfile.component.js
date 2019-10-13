@@ -81,7 +81,6 @@ const EditProfile = ({
         <i className="fas fa-user" /> Let's get some information to make your
         profile stand out
       </p>
-      <small>* = required field</small>
       <form className="form" onSubmit={e => onSubmit(e)}>
         <div className="form-group">
           <select name="status" value={status} onChange={e => onChange(e)}>
@@ -95,9 +94,6 @@ const EditProfile = ({
             <option value="Intern">Intern</option>
             <option value="Other">Other</option>
           </select>
-          <small className="form-text">
-            Give us an idea of where you are at in your career
-          </small>
         </div>
         <div className="form-group">
           <FormInput
@@ -107,9 +103,6 @@ const EditProfile = ({
             value={company}
             onChange={e => onChange(e)}
           />
-          <small className="form-text">
-            Could be your own company or one you work for
-          </small>
         </div>
         <div className="form-group">
           <FormInput
@@ -119,9 +112,6 @@ const EditProfile = ({
             value={website}
             onChange={e => onChange(e)}
           />
-          <small className="form-text">
-            Could be your own or a company website
-          </small>
         </div>
         <div className="form-group">
           <FormInput
@@ -131,9 +121,6 @@ const EditProfile = ({
             value={location}
             onChange={e => onChange(e)}
           />
-          <small className="form-text">
-            City & state suggested (eg. Boston, MA)
-          </small>
         </div>
         <div className="form-group">
           <FormInput
@@ -161,13 +148,13 @@ const EditProfile = ({
           </small>
         </div>
         <div className="form-group">
+          <label>Tell us a little about yourself</label>
           <textarea
             label="A short bio of yourself"
             name="bio"
             value={bio}
             onChange={e => onChange(e)}
           />
-          <small className="form-text">Tell us a little about yourself</small>
         </div>
 
         <div className="my-2">
@@ -184,7 +171,7 @@ const EditProfile = ({
           <Fragment>
             <div className="form-group social-input">
               <i className="fab fa-twitter fa-2x" />
-              <FormInput
+              <input
                 type="text"
                 label="Twitter URL"
                 name="twitter"
@@ -195,7 +182,7 @@ const EditProfile = ({
 
             <div className="form-group social-input">
               <i className="fab fa-facebook fa-2x" />
-              <FormInput
+              <input
                 type="text"
                 label="Facebook URL"
                 name="facebook"
@@ -206,7 +193,7 @@ const EditProfile = ({
 
             <div className="form-group social-input">
               <i className="fab fa-youtube fa-2x" />
-              <FormInput
+              <input
                 type="text"
                 label="YouTube URL"
                 name="youtube"
@@ -217,7 +204,7 @@ const EditProfile = ({
 
             <div className="form-group social-input">
               <i className="fab fa-linkedin fa-2x" />
-              <FormInput
+              <input
                 type="text"
                 label="Linkedin URL"
                 name="linkedin"
@@ -228,7 +215,7 @@ const EditProfile = ({
 
             <div className="form-group social-input">
               <i className="fab fa-instagram fa-2x" />
-              <FormInput
+              <input
                 type="text"
                 label="Instagram URL"
                 name="instagram"
