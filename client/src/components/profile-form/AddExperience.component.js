@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addExperience } from '../../redux/actions/profile.action';
+import FormInput from '../form-input/FormInput.component';
 
 const AddExperience = ({ addExperience, history }) => {
   const [formData, setFormData] = useState({
@@ -29,7 +30,6 @@ const AddExperience = ({ addExperience, history }) => {
         <i className="fas fa-code-branch" /> Add any developer/programming
         positions that you have had in the past
       </p>
-      <small>* = required field</small>
       <form
         className="form"
         onSubmit={e => {
@@ -38,9 +38,9 @@ const AddExperience = ({ addExperience, history }) => {
         }}
       >
         <div className="form-group">
-          <input
+          <FormInput
             type="text"
-            placeholder="* Job Title"
+            label="Job Title"
             name="title"
             value={title}
             onChange={e => onChange(e)}
@@ -48,9 +48,9 @@ const AddExperience = ({ addExperience, history }) => {
           />
         </div>
         <div className="form-group">
-          <input
+          <FormInput
             type="text"
-            placeholder="* Company"
+            label="Company"
             name="company"
             value={company}
             onChange={e => onChange(e)}
@@ -58,9 +58,9 @@ const AddExperience = ({ addExperience, history }) => {
           />
         </div>
         <div className="form-group">
-          <input
+          <FormInput
             type="text"
-            placeholder="Location"
+            label="Location"
             name="location"
             value={location}
             onChange={e => onChange(e)}

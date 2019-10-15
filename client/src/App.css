@@ -288,6 +288,16 @@ img {
   margin: 5px 0;
 }
 
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.table th {
+  background: var(--light-color);
+}
+
 /* Mobile */
 
 @media (max-width: 700px) {

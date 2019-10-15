@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addEducation } from '../../redux/actions/profile.action';
+import FormInput from '../form-input/FormInput.component';
 
 const AddEducation = ({ addEducation, history }) => {
   const [formData, setFormData] = useState({
@@ -34,10 +35,9 @@ const AddEducation = ({ addEducation, history }) => {
     <Fragment>
       <h1 className="large text-primary">Add Your Education</h1>
       <p className="lead">
-        <i className="fas fa-code-branch" /> Add any school or bootcamp that you
-        have attended
+        <i className="fas fa-graduation-cap" /> Add any school or bootcamp that
+        you have attended
       </p>
-      <small>* = required field</small>
       <form
         className="form"
         onSubmit={e => {
@@ -46,9 +46,9 @@ const AddEducation = ({ addEducation, history }) => {
         }}
       >
         <div className="form-group">
-          <input
+          <FormInput
             type="text"
-            placeholder="* School or Bootcamp"
+            label="School or Bootcamp"
             name="school"
             value={school}
             onChange={e => onChange(e)}
@@ -56,9 +56,9 @@ const AddEducation = ({ addEducation, history }) => {
           />
         </div>
         <div className="form-group">
-          <input
+          <FormInput
             type="text"
-            placeholder="* Degree or Certificate"
+            label="Degree or Certificate"
             name="degree"
             value={degree}
             onChange={e => onChange(e)}
@@ -66,9 +66,9 @@ const AddEducation = ({ addEducation, history }) => {
           />
         </div>
         <div className="form-group">
-          <input
+          <FormInput
             type="text"
-            placeholder="Field of Study"
+            label="Field of Study"
             name="fieldofstudy"
             value={fieldofstudy}
             onChange={e => onChange(e)}
