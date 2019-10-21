@@ -9,6 +9,8 @@ import ProfileExperience from './ProfileExperience.component';
 import ProfileEducation from './ProfileEducation.component';
 import { getProfileById } from '../../redux/actions/profile.action';
 
+import './profile.styles.css';
+
 const Profile = ({
   getProfileById,
   profile: { profile, loading },
