@@ -6,6 +6,7 @@ import Spinner from '../layout/Spinner/Spinner.component';
 import ProfileTop from './ProfileTop.component';
 import ProfileAbout from './ProfileAbout.component';
 import ProfileExperience from './ProfileExperience.component';
+import ProfileEducation from './ProfileEducation.component';
 import { getProfileById } from '../../redux/actions/profile.action';
 
 const Profile = ({
@@ -50,6 +51,22 @@ const Profile = ({
                 </Fragment>
               ) : (
                 <h4>No experience credentials</h4>
+              )}
+            </div>
+
+            <div className="profile-edu bg-white p-2">
+              <h2 className="text-primary">Education</h2>
+              {profile.education.length > 0 ? (
+                <Fragment>
+                  {profile.education.map(education => (
+                    <ProfileEducation
+                      key={education._id}
+                      education={education}
+                    />
+                  ))}
+                </Fragment>
+              ) : (
+                <h4>No education credentials</h4>
               )}
             </div>
           </div>
