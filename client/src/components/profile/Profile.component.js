@@ -7,6 +7,7 @@ import ProfileTop from './ProfileTop.component';
 import ProfileAbout from './ProfileAbout.component';
 import ProfileExperience from './ProfileExperience.component';
 import ProfileEducation from './ProfileEducation.component';
+import ProfileGithub from './ProfileGithub.component';
 import { getProfileById } from '../../redux/actions/profile.action';
 
 import './profile.styles.css';
@@ -71,6 +72,9 @@ const Profile = ({
                 <h4>No education credentials</h4>
               )}
             </div>
+            {profile.githubusername && (
+              <ProfileGithub username={profile.githubusername} />
+            )}
           </div>
         </Fragment>
       )}
