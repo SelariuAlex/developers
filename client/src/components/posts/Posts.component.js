@@ -5,6 +5,8 @@ import Spinner from '../layout/Spinner/Spinner.component';
 import PostItem from './PostItem.component';
 import { getPosts } from '../../redux/actions/post.action';
 
+import './posts.styles.css';
+
 const Posts = ({ getPosts, post: { posts, loading } }) => {
   useEffect(() => {
     getPosts();
