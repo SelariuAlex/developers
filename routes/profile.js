@@ -366,7 +366,7 @@ router.delete("/projects/:proj_id", auth, async (req, res) => {
     const foundProfile = await Profile.findOne({ user: req.user.id });
     const projectsIds = foundProfile.projects.map(proj => proj._id.toString());
 
-    const removeIndex = projectsIds.indexOf(req.params.edu_id);
+    const removeIndex = projectsIds.indexOf(req.params.proj_id);
     if (removeIndex === -1) {
       return res.status(500).json({ msg: "Server error" });
     } else {
