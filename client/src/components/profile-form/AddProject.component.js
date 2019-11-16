@@ -48,7 +48,6 @@ const AddProject = ({ addProject, history }) => {
             name="website"
             value={website}
             onChange={e => onChange(e)}
-            required
           />
         </div>
         <div className="form-group">
