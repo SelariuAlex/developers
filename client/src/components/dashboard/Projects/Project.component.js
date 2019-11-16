@@ -4,14 +4,22 @@ import { connect } from "react-redux";
 import { deleteProject } from "../../../redux/actions/profile.action";
 
 const Project = ({ project, deleteProject }) => {
-  const projects = project.map(exp => (
-    <tr key={exp._id}>
-      <td>{exp.project}</td>
-      <td>{exp.website}</td>
-      <td>{exp.github}</td>
+  const projects = project.map(proj => (
+    <tr key={proj._id}>
+      <td>{proj.project}</td>
+      <td>
+        <a target="_blank" href={proj.website}>
+          Website Link
+        </a>
+      </td>
+      <td>
+        <a target="_blank" href={proj.github}>
+          Github Link
+        </a>
+      </td>
       <td>
         <button
-          onClick={() => deleteProject(exp._id)}
+          onClick={() => deleteProject(proj._id)}
           className="btn btn-danger"
         >
           Delete
@@ -22,7 +30,7 @@ const Project = ({ project, deleteProject }) => {
 
   return (
     <Fragment>
-      <h2 className="my-2">Experience Credentials</h2>
+      <h2 className="my-2">My Projects</h2>
       <table className="table">
         <thead>
           <tr>
