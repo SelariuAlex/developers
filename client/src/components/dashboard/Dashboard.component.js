@@ -1,15 +1,16 @@
-import React, { useEffect, Fragment } from 'react';
-import Spinner from '../layout/Spinner/Spinner.component';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { useEffect, Fragment } from "react";
+import Spinner from "../layout/Spinner/Spinner.component";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import {
   getCurrentProfile,
   deleteAccount
-} from '../../redux/actions/profile.action';
-import DashboardActions from './DashboardActions.component';
-import Education from './Education/Education.component';
-import Experience from './Experience/Experience.component';
+} from "../../redux/actions/profile.action";
+import DashboardActions from "./DashboardActions.component";
+import Education from "./Education/Education.component";
+import Experience from "./Experience/Experience.component";
+import Project from "./Projects/Project.component";
 
 const Dashboard = ({
   getCurrentProfile,
@@ -33,6 +34,7 @@ const Dashboard = ({
         <Fragment>
           <DashboardActions />
           <Experience experience={profile.experience} />
+          <Project project={profile.projects} />
           <Education education={profile.education} />
           <div className="my-2">
             <button className="btn btn-danger" onClick={() => deleteAccount()}>
@@ -64,7 +66,6 @@ const mapStateToProps = state => ({
   profile: state.profile
 });
 
-export default connect(
-  mapStateToProps,
-  { getCurrentProfile, deleteAccount }
-)(Dashboard);
+export default connect(mapStateToProps, { getCurrentProfile, deleteAccount })(
+  Dashboard
+);

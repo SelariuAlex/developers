@@ -247,6 +247,24 @@ export const deleteEducation = id => async dispatch => {
   }
 };
 
+export const deleteProject = id => async dispatch => {
+  try {
+    const res = await axios.delete(`/api/profile/projects/${id}`);
+
+    dispatch({
+      type: UPDATE_PROFILE,
+      payload: res.data
+    });
+
+    dispatch(setAlert("Project Removed", "success"));
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    });
+  }
+};
+
 export const deleteAccount = () => async dispatch => {
   if (window.confirm("Are you sure? This will DELETE your account")) {
     try {
