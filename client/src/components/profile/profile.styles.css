@@ -99,6 +99,10 @@
   flex-basis: 20%;
 }
 
+.fixSpace {
+  white-space: pre-wrap;
+}
+
 @media (max-width: 700px) {
   .profile {
     grid-template-columns: 1fr;

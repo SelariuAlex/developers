@@ -8,13 +8,20 @@ const ProfileProject = ({
     <h3 className="text-dark">{project}</h3>
 
     <p>
-      <strong>Degree: </strong> {website}
+      <strong>Website: </strong>
+      <a target="_blank" href={website}>
+        {website}
+      </a>
     </p>
     <p>
-      <strong>Field Of Study: </strong> {github}
+      <strong>Field Of Study: </strong>
+      <a target="_blank" href={github}>
+        {github}
+      </a>
     </p>
-    <p>
-      <strong>Description: </strong> {description}
+    <p className="fixSpace">
+      <strong>Description: </strong>
+      <p>{description}</p>
     </p>
   </div>
 );
