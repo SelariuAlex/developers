@@ -1,9 +1,10 @@
-import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import React from "react";
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { ProjectsLanding } from "./ProjectsLanding/ProjectsLanding.component";
 
-import './landing.styles.css';
+import "./landing.styles.css";
 
 const Landing = ({ isAuthenticated }) => {
   if (isAuthenticated) {
@@ -11,25 +12,28 @@ const Landing = ({ isAuthenticated }) => {
   }
 
   return (
-    <section className="landing">
-      <div className="dark-overlay">
-        <div className="landing__inner">
-          <h1 className="x-large">Developers Portfolios</h1>
-          <p className="lead">
-            Create your developer portfolio, share it with the word, help
-            beginners and juniors get a job
-          </p>
-          <div className="landing__buttons">
-            <Link className="btn btn-primary" to="/register">
-              Sign Up
-            </Link>
-            <Link className="btn btn-light" to="/login">
-              Login
-            </Link>
+    <div>
+      <section className="landing">
+        <div className="landing__banner dark-overlay">
+          <div className="landing__inner">
+            <h1 className="x-large">Developers Portfolios</h1>
+            <p className="lead">
+              Create your developer portfolio, share it with the word, help
+              beginners and juniors get a job
+            </p>
+            <div className="landing__buttons">
+              <Link className="btn btn-primary" to="/register">
+                Sign Up
+              </Link>
+              <Link className="btn btn-light" to="/login">
+                Login
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <ProjectsLanding />
+    </div>
   );
 };
 

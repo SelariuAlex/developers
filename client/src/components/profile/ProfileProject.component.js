@@ -9,13 +9,13 @@ const ProfileProject = ({
 
     <p>
       <strong>Website: </strong>
-      <a target="_blank" href={website}>
+      <a target="_blank" rel="noopener noreferrer" href={website}>
         {website}
       </a>
     </p>
     <p>
       <strong>Field Of Study: </strong>
-      <a target="_blank" href={github}>
+      <a target="_blank" rel="noopener noreferrer" href={github}>
         {github}
       </a>
     </p>

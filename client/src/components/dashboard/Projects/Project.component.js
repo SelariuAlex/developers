@@ -8,12 +8,12 @@ const Project = ({ project, deleteProject }) => {
     <tr key={proj._id}>
       <td>{proj.project}</td>
       <td>
-        <a target="_blank" href={proj.website}>
+        <a target="_blank" rel="noopener noreferrer" href={proj.website}>
           Website Link
         </a>
       </td>
       <td>
-        <a target="_blank" href={proj.github}>
+        <a target="_blank" rel="noopener noreferrer" href={proj.github}>
           Github Link
         </a>
       </td>

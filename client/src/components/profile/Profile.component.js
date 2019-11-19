@@ -59,7 +59,7 @@ const Profile = ({
             </div>
 
             <div className="profile-proj bg-white p-2">
-              <h2 className="text-primary">projects</h2>
+              <h2 className="text-primary">Project</h2>
               {profile.projects.length > 0 ? (
                 <Fragment>
                   {profile.projects.map(project => (
