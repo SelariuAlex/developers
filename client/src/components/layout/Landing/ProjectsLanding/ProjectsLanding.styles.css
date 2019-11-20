@@ -1,3 +1,49 @@
-.projects {
+.project {
   height: 100vh;
+}
+
+.project__title {
+  text-align: center;
+  color: var(--primary-color);
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.project__container {
+  height: 50vh;
+}
+
+.project__img {
+  height: 50%;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.project__img img {
+  position: relative;
+}
+
+.project__buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.project__button {
+  text-align: center;
+  width: 5rem;
+  padding: 0.7rem;
+}
+
+.project--website {
+  background: darkblue;
+}
+
+.project--github {
+  background: black;
+}
+
+.project__about {
+  width: 80%;
+  margin: 0 auto 2rem;
 }
