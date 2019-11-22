@@ -20,7 +20,7 @@ export const ProjectsLanding = () => {
           </div>
           <div className="project__buttons">
             <a
-              className="project__button project--website"
+              className="btn btn-primary"
               target="_blank"
               rel="noopener noreferrer"
               href="https://booking-rentals.herokuapp.com/rentals"
@@ -28,7 +28,7 @@ export const ProjectsLanding = () => {
               Website
             </a>
             <a
-              className="project__button project--github"
+              className="btn btn-dark"
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/SelariuAlex/booking-rental"
