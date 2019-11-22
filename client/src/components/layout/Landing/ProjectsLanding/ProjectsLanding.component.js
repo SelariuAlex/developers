@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectImg from "../../../../img/cv.jpg";
+import ProjectImg from "../../../../img/bedroom2.jpeg";
 
 import "./ProjectsLanding.styles.css";
 
@@ -9,13 +9,10 @@ export const ProjectsLanding = () => {
       <h2 className="project__title">Share your projects</h2>
       <div className="project__container">
         <section className="project__about">
-          <h3>Movie app</h3>
-          <p>
-            A website where you can find all the new movies and search for your
-            favorite ones
-          </p>
-          <p>See the IMDB Rating</p>
-          <p>Read the plot and see all the actors</p>
+          <h3>Rental app</h3>
+          <p>A website where you create your own rentals</p>
+          <p>Book one of the rentals</p>
+          <p>Search rentals in your city</p>
         </section>
         <section className="project__img">
           <div>
@@ -26,7 +23,7 @@ export const ProjectsLanding = () => {
               className="project__button project--website"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://popular-movies.netlify.com/"
+              href="https://booking-rentals.herokuapp.com/rentals"
             >
               Website
             </a>
@@ -34,7 +31,7 @@ export const ProjectsLanding = () => {
               className="project__button project--github"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/SelariuAlex/PopularMovies"
+              href="https://github.com/SelariuAlex/booking-rental"
             >
               Github
             </a>

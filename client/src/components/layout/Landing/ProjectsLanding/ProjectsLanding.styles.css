@@ -46,6 +46,7 @@
 
   .project__container {
     display: flex;
+    flex-direction: row-reverse;
   }
 
   .project__about {
