@@ -1,5 +1,5 @@
 .project {
-  height: 100vh;
+  height: 90vh;
 }
 
 .project__title {
@@ -9,18 +9,8 @@
   font-size: 2rem;
 }
 
-.project__container {
-  height: 50vh;
-}
-
 .project__img {
-  height: 50%;
-  width: 80%;
-  margin: 2rem auto;
-}
-
-.project__img img {
-  position: relative;
+  margin: 2rem;
 }
 
 .project__buttons {
@@ -32,7 +22,8 @@
 .project__button {
   text-align: center;
   width: 5rem;
-  padding: 0.7rem;
+  padding: 0.5rem;
+  border-radius: 10%;
 }
 
 .project--website {
@@ -45,5 +36,20 @@
 
 .project__about {
   width: 80%;
-  margin: 0 auto 2rem;
+  margin: 0 2rem;
+}
+
+@media (min-width: 700px) {
+  .project__title {
+    font-size: 3rem;
+  }
+
+  .project__container {
+    display: flex;
+  }
+
+  .project__about {
+    margin: 2rem;
+    font-size: 1.2rem;
+  }
 }

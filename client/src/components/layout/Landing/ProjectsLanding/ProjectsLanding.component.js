@@ -17,8 +17,8 @@ export const ProjectsLanding = () => {
           <p>See the IMDB Rating</p>
           <p>Read the plot and see all the actors</p>
         </section>
-        <section>
-          <div className="project__img">
+        <section className="project__img">
+          <div>
             <img src={ProjectImg} alt="" />
           </div>
           <div className="project__buttons">
