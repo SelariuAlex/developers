@@ -104,6 +104,14 @@ const ProfileSchema = new mongoose.Schema({
       }
     }
   ],
+  workshops: [
+    {
+      description: {
+        type: String,
+        required: true
+      }
+    }
+  ],
   social: {
     youtube: {
       type: String
