@@ -380,6 +380,46 @@ router.delete("/projects/:proj_id", auth, async (req, res) => {
   }
 });
 
+// WORKSHOPS
+
+//PUT api/profile/workshops
+router.put(
+  "/workshop",
+  [
+    auth,
+    [
+      check("workshop", "Add workshops or meetups you attended")
+        .not()
+        .isEmpty()
+    ]
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    const { description } = req.body;
+
+    const newWorkshop = {
+      description
+    };
+
+    try {
+      const profile = await Profile.findOne({ user: req.user.id });
+
+      profile.projects.unshift(newWorkshop);
+
+      await profile.save();
+
+      res.json(profile);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send("Server Error");
+    }
+  }
+);
+
 // GET api/profile/github/:username
 router.get("/github/:username", (req, res) => {
   try {

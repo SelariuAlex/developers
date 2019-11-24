@@ -104,7 +104,7 @@ const ProfileSchema = new mongoose.Schema({
       }
     }
   ],
-  workshops: [
+  workshop: [
     {
       description: {
         type: String,
