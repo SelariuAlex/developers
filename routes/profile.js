@@ -420,6 +420,26 @@ router.put(
   }
 );
 
+//DELETE api/profile/workshop/:work_id
+router.delete("/workshop/:work_id", auth, async (req, res) => {
+  try {
+    const foundProfile = await Profile.findOne({ user: req.user.id });
+    const workshopsIds = foundProfile.workshop.map(work => work._id.toString());
+
+    const removeIndex = workshopsIds.indexOf(req.params.proj_id);
+    if (removeIndex === -1) {
+      return res.status(500).json({ msg: "Server error" });
+    } else {
+      foundProfile.workshop.splice(removeIndex, 1);
+      await foundProfile.save();
+      return res.status(200).json(foundProfile);
+    }
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ msg: "Server error" });
+  }
+});
+
 // GET api/profile/github/:username
 router.get("/github/:username", (req, res) => {
   try {
