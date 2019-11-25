@@ -265,6 +265,24 @@ export const deleteProject = id => async dispatch => {
   }
 };
 
+export const deleteWorkshop = id => async dispatch => {
+  try {
+    const res = await axios.delete(`/api/profile/workshop/${id}`);
+
+    dispatch({
+      type: UPDATE_PROFILE,
+      payload: res.data
+    });
+
+    dispatch(setAlert("Workshop Removed", "success"));
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    });
+  }
+};
+
 export const deleteAccount = () => async dispatch => {
   if (window.confirm("Are you sure? This will DELETE your account")) {
     try {
