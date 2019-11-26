@@ -9,7 +9,7 @@ const Workshop = ({ workshop, deleteWorkshop }) => {
       <td>{work.description}</td>
       <td>
         <button
-          onClick={() => deleteWorkshop(proj._id)}
+          onClick={() => deleteWorkshop(work._id)}
           className="btn btn-danger"
         >
           Delete
@@ -34,7 +34,7 @@ const Workshop = ({ workshop, deleteWorkshop }) => {
   );
 };
 
-Project.propTypes = {
+Workshop.propTypes = {
   workshop: PropTypes.array.isRequired,
   deleteWorkshop: PropTypes.func.isRequired
 };

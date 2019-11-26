@@ -11,6 +11,7 @@ import DashboardActions from "./DashboardActions.component";
 import Education from "./Education/Education.component";
 import Experience from "./Experience/Experience.component";
 import Project from "./Projects/Project.component";
+import Workshop from "./Workshop/Workshop.component";
 
 const Dashboard = ({
   getCurrentProfile,
@@ -36,6 +37,7 @@ const Dashboard = ({
           <Experience experience={profile.experience} />
           <Project project={profile.projects} />
           <Education education={profile.education} />
+          <Workshop workshop={profile.workshop} />
           <div className="my-2">
             <button className="btn btn-danger" onClick={() => deleteAccount()}>
               <i className="fas fa-user-minus" /> Delete My Account
