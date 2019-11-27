@@ -388,7 +388,7 @@ router.put(
   [
     auth,
     [
-      check("workshop", "Add workshops or meetups you attended")
+      check("description", "Add workshops or meetups you attended")
         .not()
         .isEmpty()
     ]
@@ -408,7 +408,7 @@ router.put(
     try {
       const profile = await Profile.findOne({ user: req.user.id });
 
-      profile.projects.unshift(newWorkshop);
+      profile.workshop.unshift(newWorkshop);
 
       await profile.save();
 
