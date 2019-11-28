@@ -28,7 +28,7 @@ const Workshop = ({ workshop, deleteWorkshop }) => {
             <th />
           </tr>
         </thead>
-        <tbody>{workshops}</tbody>
+        <tbody className="fixSpace">{workshops}</tbody>
       </table>
     </Fragment>
   );
