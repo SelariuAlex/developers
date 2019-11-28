@@ -8,6 +8,7 @@ import ProfileAbout from "./ProfileAbout.component";
 import ProfileExperience from "./ProfileExperience.component";
 import ProfileEducation from "./ProfileEducation.component";
 import ProfileProject from "./ProfileProject.component";
+import ProfileWorkshop from "./ProfileWorkshop.component";
 import ProfileGithub from "./ProfileGithub.component";
 import { getProfileById } from "../../redux/actions/profile.action";
 
@@ -68,6 +69,19 @@ const Profile = ({
                 </Fragment>
               ) : (
                 <h4>No projects</h4>
+              )}
+            </div>
+
+            <div className="profile-work bg-white p-2">
+              <h2 className="text-primary">Workshops & Meetups</h2>
+              {profile.workshop.length > 0 ? (
+                <Fragment>
+                  {profile.workshop.map(workshop => (
+                    <ProfileWorkshop key={workshop._id} workshop={workshop} />
+                  ))}
+                </Fragment>
+              ) : (
+                <h4>No Workshops</h4>
               )}
             </div>
 
