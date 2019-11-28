@@ -10,7 +10,7 @@ const ProfileWorkshop = ({ workshop: { description } }) => (
 );
 
 ProfileWorkshop.propTypes = {
-  project: PropTypes.object.isRequired
+  workshop: PropTypes.object.isRequired
 };
 
 export default ProfileWorkshop;

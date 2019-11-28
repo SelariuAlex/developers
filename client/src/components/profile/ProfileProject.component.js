@@ -14,7 +14,7 @@ const ProfileProject = ({
       </a>
     </p>
     <p>
-      <strong>Field Of Study: </strong>
+      <strong>Github: </strong>
       <a target="_blank" rel="noopener noreferrer" href={github}>
         {github}
       </a>

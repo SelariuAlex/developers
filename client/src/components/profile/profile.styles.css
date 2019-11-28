@@ -5,6 +5,7 @@
     "about about"
     "proj proj"
     "exp edu"
+    "work work"
     "github github";
   grid-gap: 1rem;
 }
@@ -41,6 +42,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.profile-work {
+  grid-area: work;
 }
 
 .profile-proj {
@@ -126,6 +131,7 @@
       "exp"
       "proj"
       "edu"
+      "work"
       "github";
   }
 

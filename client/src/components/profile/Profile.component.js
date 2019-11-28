@@ -81,7 +81,7 @@ const Profile = ({
                   ))}
                 </Fragment>
               ) : (
-                <h4>No Workshops</h4>
+                <h4>No Workshops or Meetups</h4>
               )}
             </div>
 
