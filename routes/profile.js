@@ -426,7 +426,7 @@ router.delete("/workshop/:work_id", auth, async (req, res) => {
     const foundProfile = await Profile.findOne({ user: req.user.id });
     const workshopsIds = foundProfile.workshop.map(work => work._id.toString());
 
-    const removeIndex = workshopsIds.indexOf(req.params.proj_id);
+    const removeIndex = workshopsIds.indexOf(req.params.work_id);
     if (removeIndex === -1) {
       return res.status(500).json({ msg: "Server error" });
     } else {
