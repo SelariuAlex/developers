@@ -2,6 +2,11 @@
   height: 90vh;
 }
 
+.project__container {
+  background-color: rgb(236, 236, 236);
+  margin: 2rem;
+}
+
 .project__title {
   text-align: center;
   color: var(--primary-color);
@@ -16,7 +21,6 @@
 .project__buttons {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 2rem;
 }
 
 .project__about {
@@ -24,7 +28,21 @@
   margin: 0 2rem;
 }
 
-@media (min-width: 700px) {
+.project__about--title {
+  margin: 1rem auto;
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.6rem;
+  padding: 0.3rem 1.6rem;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+.project__about--tech {
+  margin-top: 0.6rem;
+}
+
+@media (min-width: 1000px) {
   .project__title {
     font-size: 3rem;
   }
@@ -35,7 +53,17 @@
   }
 
   .project__about {
+    position: relative;
+    padding-left: 2rem;
     margin: 2rem;
     font-size: 1.2rem;
+  }
+
+  .project__about--title {
+    position: absolute;
+    left: -12rem;
+    top: 10rem;
+    font-size: 1.7rem;
+    padding: 0.5rem 2rem;
   }
 }
