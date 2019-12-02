@@ -1,0 +1,43 @@
+.experience {
+  display: block;
+}
+
+.experience__bg {
+  background: url("../../../../img/experience.jpg") no-repeat center
+    center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.education__bg {
+  background: url("../../../../img/education.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience__bg--text {
+  flex: 0 0 80%;
+  text-align: center;
+  padding: 6rem 0;
+  margin: 4rem auto;
+  outline: 1px solid #191919;
+  outline-offset: -10px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: 1000px) {
+  .experience {
+    display: flex;
+    height: 80vh;
+  }
+
+  .education__bg {
+    width: 50vw;
+  }
+
+  .experience__bg {
+    width: 50vw;
+  }
+}

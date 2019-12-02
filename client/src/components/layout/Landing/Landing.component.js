@@ -3,6 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { ProjectsLanding } from "./ProjectsLanding/ProjectsLanding.component";
+import { ExperienceLanding } from "./ExperienceLanding/ExperienceLanding.component";
 
 import "./landing.styles.css";
 
@@ -33,6 +34,8 @@ const Landing = ({ isAuthenticated }) => {
         </div>
       </section>
       <ProjectsLanding />
+      <h2 className="project__title">Experience and Education</h2>
+      <ExperienceLanding />
     </div>
   );
 };
