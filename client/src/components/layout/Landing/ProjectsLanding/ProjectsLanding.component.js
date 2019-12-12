@@ -11,13 +11,15 @@ export const ProjectsLanding = () => {
         <section className="project__about">
           <h3 className="project__about--title">Rental app</h3>
           <h4>Description:</h4>
-          <p>A website where you create your own rentals</p>
-          <p>Book one of the rentals</p>
-          <p>Search rentals in your city</p>
+          <p>A website where you create and edit your own rentals</p>
+          <p>Manage booking from other users</p>
+          <p>Search and book rentals from other users</p>
           <h4 className="project__about--tech">Technologies used:</h4>
           <p>React.js / Node.js / Express / MongoDB</p>
+          <p>Redux for state management</p>
           <p>Utilize Moment.js to implement calendar</p>
           <p>Integrate login / register using JSON Web Tokens</p>
+          <p>Styling in SCSS</p>
         </section>
         <section className="project__img">
           <div>

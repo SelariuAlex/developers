@@ -1,14 +1,14 @@
-import React, { Fragment, useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
-import FormInput from '../../form-input/FormInput.component';
-import { loginUser } from '../../../redux/actions/auth.action';
-import PropTypes from 'prop-types';
+import React, { Fragment, useState } from "react";
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+import FormInput from "../../form-input/FormInput.component";
+import { loginUser } from "../../../redux/actions/auth.action";
+import PropTypes from "prop-types";
 
 const Login = ({ loginUser, isAuthenticated }) => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    email: "",
+    password: ""
   });
 
   const { email, password } = formData;
@@ -70,7 +70,4 @@ const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(
-  mapStateToProps,
-  { loginUser }
-)(Login);
+export default connect(mapStateToProps, { loginUser })(Login);
